@@ -1,0 +1,23 @@
+# Separar los datos contenidos en mensaje_recibido en una lista
+datos_recibidos = mensaje_recibido.split(',')
+
+# Agrupar los datos en una lista con cuatro valores
+datos_agrupados = []
+for i in range(0, len(datos_recibidos), 4):
+    v_motor = float(datos_recibidos[i])
+    i_motor = float(datos_recibidos[i+1])
+    set_pwm = int(datos_recibidos[i+2])
+    motor_on = bool(int(datos_recibidos[i+3]))
+    datos_agrupados.append([v_motor, i_motor, set_pwm, motor_on])
+
+# Crear dos listas para almacenar los valores de voltaje y corriente del motor
+v_motor = []
+i_motor = []
+for datos in datos_agrupados:
+    if datos[3]:
+        v_motor.append(datos[0])
+        i_motor.append(datos[1])
+
+# Mostrar los valores almacenados en v_motor e i_motor
+print('v_motor:', v_motor)
+print('i_motor:', i_motor)  
