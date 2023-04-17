@@ -1,0 +1,12 @@
+datos_recibidos = '12.5,3.25,120,0'
+
+# Dividir la cadena en una lista de valores separados por comas y convertirlos a sus tipos de datos correspondientes
+v_motor, i_motor, set_pwm, motor_on = map(lambda x: float(x) if '.' in x else int(x), datos_recibidos.split(','))
+
+# Crear el diccionario
+parametros = {
+    'v_motor': v_motor,
+    'i_motor': i_motor,
+    'set_pwm': set_pwm,
+    'motor_on': bool(motor_on)
+              }
