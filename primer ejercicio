@@ -1,0 +1,15 @@
+float(text_dato_1)
+float(text_dato_2)
+float(text_dato_3) 
+num1,num2,num3 = 0.5, 0.85, 0.25
+abs=(num1*num2*num3)
+abs
+print ("el volumen de la caja es:{}m3".format(abs))
+abs = (((num1*num2*num3)*15990)+2500)
+abs
+var_1= 4198.937
+costo_envio= var_1
+print ("el costo de envio es de {},compuesto por volumen de {}$ mas $2500 por servicio".format(var_1,15990))
+print(f'El valor almacenado en la variable costo_envio es $ {costo_envio}')
+print(f'La variable costo_envio es de tipo {type(costo_envio)}')
+
